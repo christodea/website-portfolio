@@ -1,0 +1,166 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6c26a34934.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img
+            width="100"
+            height="100"
+            class="logo"
+            src="images/logo.png"
+            alt="logo"
+          />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-text">
+          <p>WEB DEVELOPER</p>
+          <h1>
+            Hi I'm <span>Diana</span> <br />
+            Antwi from Ghana
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- -----about section----- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.jpg" alt="me" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              nisi, soluta qui sequi modi ipsa labore ipsum optio totam maiores
+              ducimus fuga saepe perspiciatis! Vel rem magni doloribus illum
+              laborum.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active tab" id="skills">
+              <ul>
+                <li><span>WEB DEVELOPER</span><br />Web app development</li>
+                <li><span>WORDPRESS</span><br />Website Design</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2023</span><br />web development training at Arnson
+                  Innovate
+                </li>
+                <li><span>2024</span><br />Internship training at CODEIOX</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2024</span><br />IT student at University of Cape Coast
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------services---------------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus soluta esse, error dolor consectetur sint. Tempora,
+              deserunt voluptatum. Unde officia repellendus tenetur debitis
+              necessitatibus voluptates voluptatibus veniam fugiat labore error.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+
+            <h2>WORDPRESS Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus soluta esse, error dolor consectetur sint. Tempora,
+              deserunt voluptatum. Unde officia repellendus tenetur debitis
+              necessitatibus voluptates voluptatibus veniam fugiat labore error.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------portfolio----------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="" alt="work" />
+          </div>
+          <div class="work">
+            <img src="" alt="work" />
+          </div>
+          <div class="work">
+            <img src="" alt="work" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
