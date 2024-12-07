@@ -4,10 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/6c26a34934.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="awesome.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -21,13 +18,15 @@
             src="images/logo.png"
             alt="logo"
           />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
         <div class="header-text">
@@ -68,7 +67,9 @@
 
             <div class="tab-contents active tab" id="skills">
               <ul>
-                <li><span>WEB DEVELOPER</span><br />Web app development</li>
+                <li><span>HTML & CSS</span><br />Frontend Development</li>
+                <li><span>Figma</span><br />UI/UX</li>
+                <li><span>Web Developer</span><br />Web app development</li>
                 <li><span>WordPress</span><br />Website Design</li>
               </ul>
             </div>
@@ -113,9 +114,8 @@
             <a href="#">Learn more</a>
           </div>
           <div>
-            <i class="fa-brands fa-app-store-ios"></i>
-
-            <h2>WORDPRESS Web Design</h2>
+            <i class="fa-brands fa-wordpress"></i>
+            <h2>WordPress</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus soluta esse, error dolor consectetur sint. Tempora,
@@ -181,9 +181,41 @@
     <div id="contact">
       <div class="container">
         <div class="row">
-          <div class="contact-left"></div>
-          <div class="contact-right"></div>
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <p><i class="fa-solid fa-phone"></i>0206657172</p>
+            <div class="social-icons">
+              <a href="https://facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="" class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Diana.</p>
       </div>
     </div>
 
@@ -201,6 +233,16 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
       }
     </script>
   </body>
